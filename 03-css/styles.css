@@ -1,1 +1,155 @@
-/* Add your CSS code here  */
+:root {
+  --ice-blue-juvie: #8fbcd4;
+  --gothic-gray-blue: #6f8796;
+  --dark-slate-infinity: #1f2a33;
+  --header_color: #f0f0f0;
+  --grid_border: #dddddd;
+  --cell_color: #fafafa;
+  --text_color: #333333;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.top_of_page {
+  height: 60px;
+  width: 100%;
+  background-color: var(--dark-slate-infinity);
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.top_of_page h3 {
+  margin: 0;
+  padding: 10px 5px;
+  font-family: "Cinzel", serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: var(--ice-blue-juvie);
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.top_of_page h3:hover {
+  background-color: var(--ice-blue-juvie);
+  color: var(--dark-slate-infinity);
+}
+
+.rest_of_page {
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: var(--gothic-gray-blue);
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 2em;
+}
+
+h2 {
+  font-family: "Cinzel", serif;
+  font-size: 1.3em;
+}
+
+ul,
+ol {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding-left: 25px;
+}
+
+li {
+  padding: 5px;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--grid_border);
+  width: 100%;
+}
+
+.book-list li {
+  font-size: 1em;
+  font-family: "Quicktype", sans-serif;
+  color: var(--dark-slate-infinity);
+  padding-bottom: 0.7em;
+  padding-top: 0.7em;
+}
+
+.book-covers {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  size: 200px;
+  padding-bottom: 2.5em;
+}
+
+.book-covers img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.grid_table {
+  border: 1px solid var(--grid_border);
+  background-color: var(--grid_border);
+  display: grid;
+  height: 400px;
+  grid-template-columns: 1.1fr repeat(5, 1fr) 1.1fr;
+  grid-template-rows: repeat(8, auto);
+  gap: 1px;
+}
+
+.cell {
+  border: 1px solid var(--grid_border);
+  background-color: #ffffff;
+  padding: 8px;
+  text-align: center;
+  font-family: "Quicktype", sans-serif;
+  color: var(--text_color);
+  display: flex;
+  justify-content: center; /* Vertical if flex-direction is column */
+  align-items: center; /* Horizontal if flex-direction is column */
+  flex-direction: column;
+}
+
+.header {
+  background-color: var(--header_color);
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.even_cell {
+  background-color: var(--cell_color);
+}
+
+.six_wide {
+  grid-column: span 6;
+}
+
+.five_wide {
+  grid-column: span 5;
+}
+
+.four_wide {
+  grid-column: span 4;
+}
+
+.three_wide {
+  grid-column: span 3;
+}
+
+.tall {
+  grid-row: span 2;
+}

@@ -1,36 +1,101 @@
 body {
   font-family: Arial, sans-serif;
-  background: white;
-  color: black;
+  background: black;
   margin: 0;
 }
 
-.top-of-page,
-.bottom-of-page {
+.top-of-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: black;
   color: white;
-  text-align: center;
-  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top_of_page h1 {
+  align-self: left;
+  padding-left: 100px;
 }
 
 .navigation {
-  background: #eee;
-  padding: 10px;
-  text-align: center;
+  color: #eee;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .navigation a {
-  color: black;
+  color: white;
   margin: 0 10px;
   text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.navigation a:hover {
+  color: greenyellow;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.main-area {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 650px;
 }
 
 .page-area {
   padding: 20px;
-  border-bottom: 1px solid black;
+  border: 1px solid black;
+  border-radius: 15px;
+  align-items: center;
+  height: 550px;
+  width: 290px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 2;
 }
 
 img {
-  max-width: 300px;
   display: block;
+}
+
+h6 {
+  color: black;
+  font-size: 13px;
+  font-weight: 5;
+}
+
+h5 {
+  color: white;
+  font-size: 18px;
+  font-weight: 2;
+}
+
+.img_descriptor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.img_descriptor img {
+  width: 55%;
+  max-width: none;
+  max-height: none;
+  height: auto;
+}
+
+.bottom-of-page {
+  background: black;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }

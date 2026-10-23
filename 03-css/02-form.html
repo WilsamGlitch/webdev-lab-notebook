@@ -5,14 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CSS Exercise 02 - Form</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="02-form.css" />
   </head>
   <body>
-    <main>
+    <section class="main_form">
+      <h1>Roth IRA Calculator</h1>
+      <form action="/submitform">
+        <div class="each_item">
+          <label for="balance">Balance ($)</label>
+          <input type="text" name="balance" id="balance" />
+        </div>
+        <div class="each_item">
+          <label for="annual">Annual Contribution ($)</label>
+          <input type="text" name="annual" id="annual" />
+        </div>
+        <fieldset>
+          <legend>Maximize contribution?</legend>
+          <div class="radio_group">
+            <input type="radio" name="maximize" id="yes" value="yes" />
+            <label for="yes">Yes</label>
+            <input type="radio" name="maximize" id="no" value="no" />
+            <label for="no">No</label>
+          </div>
+        </fieldset>
+        <div class="each_item">
+          <label for="rate">Expected rate of return (%)</label>
+          <input type="number" name="rate" id="rate" />
+        </div>
+        <div class="each_item">
+          <label for="current">Current Age</label>
+          <input type="number" name="current" id="current" />
+        </div>
+        <div class="each_item">
+          <label for="current">Retirement age</label>
+          <input type="number" name="retire" id="retire" />
+        </div>
+        <div class="each_item">
+          <label for="tax">Marginal Tax Rate (%)</label>
+          <input type="number" name="tax" id="tax" />
+        </div>
+        <div class="buttons">
+          <input type="submit" value="Calculate" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+      <p>
+        This exercise is a simplified version of the Roth IRA Calculator at
+        <a
+          href="https://www.calculator.net/roth-ira-calculator.html"
+          target="_blank"
+          >Calculator.net</a
+        >
+      </p>
       <!-- Start with the code from the HTML folder.
       - Make sure to fix any issues in your HTML code.
       - Delete all mentions of <br>s and style the line breaks with CSS. 
       - Add classes to style the elements on the page. -->
-    </main>
+    </section>
   </body>
 </html>

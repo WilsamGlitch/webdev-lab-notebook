@@ -6,10 +6,117 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CSS Exercise 01 - Books</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- Start with the code from the HTML folder.
-      - Make sure to fix any issues in your HTML code.
-      - Add classes to style the elements on the page. -->
+    <section class="top_of_page">
+      <div>
+        <h3>ASOIAF Books</h3>
+      </div>
+      <div>
+        <h3>First Edition Covers</h3>
+      </div>
+      <div>
+        <h3>Table of POV Characters</h3>
+      </div>
+    </section>
+    <section class="rest_of_page">
+      <h1>A Song of Ice and Fire - George R.R. Martin</h1>
+      <h2>ASOIAF Books</h2>
+      <hr class="divider" />
+      <ul>
+        <li>
+          <span class="books-list">Song of Ice and Fire Series:</span>
+          <ol class="book-list">
+            <li>A Game of Thrones (1996)</li>
+            <li>A Clash of Kings (1998)</li>
+            <li>A Storm of Swords (2000)</li>
+            <li>A Feast of Crows (2005)</li>
+            <li>A Dance with Dragons (2011)</li>
+          </ol>
+        </li>
+        <li>
+          <span class="books-list">A Knight of the Seven Kingdoms (2015)</span>
+          <ol class="book-list">
+            <li>The Hedge Knight (1998)</li>
+            <li>The Sworn Sword (2003)</li>
+            <li>The Mystery Knight (2010)</li>
+          </ol>
+        </li>
+        <li>
+          <span class="books-list">Fire and Blood (2018)</span>
+        </li>
+      </ul>
+      <h2>First Edition Covers</h2>
+      <hr class="divider" />
+      <section class="book-covers">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/9/93/AGameOfThrones.jpg"
+          alt="first edition cover of the book A Game of Thrones"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/3/39/AClashOfKings.jpg"
+          alt="first edition cover of the book A Clash of Kings"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/2/24/AStormOfSwords.jpg"
+          alt="first edition cover of the book A Storm of Swords"
+        />
+      </section>
+      <h2>POV Character with the most chapters in each book</h2>
+      <hr class="divider" />
+      <section class="grid_table">
+        <div class="cell header tall left_align_grid">POV<br />Character</div>
+        <div class="cell header five_wide">Books</div>
+        <div class="cell header tall">Total Chapters</div>
+
+        <div class="cell header">A Game of<br />Thrones</div>
+        <div class="cell header">A Clash of<br />Kings</div>
+        <div class="cell header">A Storm of<br />Swords</div>
+        <div class="cell header">A Feast for<br />Crows</div>
+        <div class="cell header">A Dance with<br />Dragons</div>
+
+        <div class="cell left_align_grid">Eddard Stark</div>
+        <div class="cell">15</div>
+        <div class="cell four_wide">n/a</div>
+        <div class="cell">15</div>
+
+        <div class="cell even_cell left_align_grid">Tyrion<br />Lannister</div>
+        <div class="cell even_cell">9</div>
+        <div class="cell even_cell">15</div>
+        <div class="cell even_cell">11</div>
+        <div class="cell even_cell">n/a</div>
+        <div class="cell even_cell">12</div>
+        <div class="cell even_cell">47</div>
+
+        <div class="cell left_align_grid">Arya Stark</div>
+        <div class="cell">5</div>
+        <div class="cell">10</div>
+        <div class="cell">13</div>
+        <div class="cell">3</div>
+        <div class="cell">2</div>
+        <div class="cell">33</div>
+
+        <div class="cell even_cell left_align_grid">Cersel<br />Lannister</div>
+        <div class="cell even_cell three_wide">n/a</div>
+        <div class="cell even_cell">10</div>
+        <div class="cell even_cell">n/a</div>
+        <div class="cell even_cell">10</div>
+
+        <div class="cell left_align_grid">Jon Snow</div>
+        <div class="cell">9</div>
+        <div class="cell">8</div>
+        <div class="cell">12</div>
+        <div class="cell">n/a</div>
+        <div class="cell">13</div>
+        <div class="cell">42</div>
+
+        <div class="cell header six_wide">Total POV Characters (Displayed)</div>
+        <div class="cell header">147</div>
+      </section>
+    </section>
   </body>
 </html>
