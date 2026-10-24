@@ -6,16 +6,19 @@
   --grid_border: #dddddd;
   --cell_color: #fafafa;
   --text_color: #333333;
+  --midnight-blue: #161678;
 }
 
-html,
-body {
+/*Exercise 01 - 01-books*/
+
+html[class="01-books"],
+body[class="01-books"] {
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-.top_of_page {
+body[class="01-books"] .top_of_page {
   height: 60px;
   width: 100%;
   background-color: var(--dark-slate-infinity);
@@ -26,7 +29,7 @@ body {
   box-sizing: border-box;
 }
 
-.top_of_page h3 {
+body[class="01-books"] .top_of_page h3 {
   margin: 0;
   padding: 10px 5px;
   font-family: "Cinzel", serif;
@@ -37,12 +40,12 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.top_of_page h3:hover {
+body[class="01-books"] .top_of_page h3:hover {
   background-color: var(--ice-blue-juvie);
   color: var(--dark-slate-infinity);
 }
 
-.rest_of_page {
+body[class="01-books"] .rest_of_page {
   padding-top: 20px;
   padding-left: 40px;
   padding-right: 40px;
@@ -50,37 +53,37 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
+body[class="01-books"] h1 {
   color: var(--gothic-gray-blue);
   text-align: center;
   font-family: "Cinzel", serif;
   font-size: 2em;
 }
 
-h2 {
+body[class="01-books"] h2 {
   font-family: "Cinzel", serif;
   font-size: 1.3em;
 }
 
-ul,
-ol {
+body[class="01-books"] ul,
+body[class="01-books"] ol {
   font-family: Arial, sans-serif;
   font-size: 16px;
   padding-left: 25px;
 }
 
-li {
+body[class="01-books"] li {
   padding: 5px;
 }
 
-.divider {
+body[class="01-books"] .divider {
   border: none;
   height: 1px;
   background-color: var(--grid_border);
   width: 100%;
 }
 
-.book-list li {
+body[class="01-books"] .book-list li {
   font-size: 1em;
   font-family: "Quicktype", sans-serif;
   color: var(--dark-slate-infinity);
@@ -88,7 +91,7 @@ li {
   padding-top: 0.7em;
 }
 
-.book-covers {
+body[class="01-books"] .book-covers {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -96,12 +99,12 @@ li {
   padding-bottom: 2.5em;
 }
 
-.book-covers img:hover {
+body[class="01-books"] .book-covers img:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease;
 }
 
-.grid_table {
+body[class="01-books"] .grid_table {
   border: 1px solid var(--grid_border);
   background-color: var(--grid_border);
   display: grid;
@@ -111,7 +114,7 @@ li {
   gap: 1px;
 }
 
-.cell {
+body[class="01-books"] .cell {
   border: 1px solid var(--grid_border);
   background-color: #ffffff;
   padding: 8px;
@@ -124,32 +127,166 @@ li {
   flex-direction: column;
 }
 
-.header {
+body[class="01-books"] .header {
   background-color: var(--header_color);
   font-weight: bold;
   font-size: 0.9em;
 }
 
-.even_cell {
+body[class="01-books"] .even_cell {
   background-color: var(--cell_color);
 }
 
-.six_wide {
+body[class="01-books"] .six_wide {
   grid-column: span 6;
 }
 
-.five_wide {
+body[class="01-books"] .five_wide {
   grid-column: span 5;
 }
 
-.four_wide {
+body[class="01-books"] .four_wide {
   grid-column: span 4;
 }
 
-.three_wide {
+body[class="01-books"] .three_wide {
   grid-column: span 3;
 }
 
-.tall {
+body[class="01-books"] .tall {
   grid-row: span 2;
+}
+
+/*Exercise 02 - 02-form*/
+
+html[class="02-form"],
+body[class="02-form"] {
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--midnight-blue);
+  font-family: "Arial", sans-serif;
+}
+
+body[class="02-form"] {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body[class="02-form"] .main_form {
+  background-color: white;
+  margin: 0;
+  padding: 30px 30px;
+  width: 400px;
+  height: 600px;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: black;
+  border-radius: 5px;
+  justify-content: left;
+  align-items: left;
+}
+
+body[class="02-form"] form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body[class="02-form"] form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+body[class="02-form"] fieldset {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+body[class="02-form"] fieldset legend {
+  width: 60%;
+  flex-shrink: 0;
+  margin-bottom: 10px;
+  margin-right: auto;
+}
+
+body[class="02-form"] fieldset input[type="radio"] {
+  margin: 0;
+}
+
+body[class="02-form"] .radio_group {
+  display: flex;
+  align-items: left;
+  gap: 5px;
+}
+
+body[class="02-form"] h1 {
+  font-size: 2.5em;
+  text-align: center;
+  color: var(--midnight-blue);
+  margin-bottom: 25px;
+}
+
+body[class="02-form"] .each_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+body[class="02-form"] .each_item label {
+  width: 60%;
+  text-align: left;
+}
+
+body[class="02-form"] .each_item input {
+  width: 200px;
+  height: 40px;
+  flex: none;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: 20px;
+  border-color: lightgray;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+body[class="02-form"] .each_item input[type="number"] {
+  appearance: auto;
+  -webkit-appearance: auto;
+}
+
+body[class="02-form"] .buttons {
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+body[class="02-form"] .buttons input {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  flex: 1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body[class="02-form"] .buttons input[type="submit"] {
+  background-color: var(--midnight-blue);
+  color: white;
+  border: none;
+}
+
+body[class="02-form"] p {
+  font-size: 12px;
 }
