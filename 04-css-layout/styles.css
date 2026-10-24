@@ -3,43 +3,196 @@
   --light-text-color: #fefefe;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/******************************************************/
 /* Exercise 01 - Center */
-.box {
-  width: 200px;
-  height: 100px;
-  padding: 1rem;
-  background: var(--purple);
-  color: var(--light-text-color);
-  font-size: 1.75rem;
-  text-align: center;
+html[class="css-layout-ex01-center"],
+body[class="css-layout-ex01-center"] {
+  margin: 0;
+  min-height: 100%;
+  background-color: #e6e6f8;
 }
 
-h1 {
-  text-align: center;
+body[class="css-layout-ex01-center"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  place-content: center;
 }
 
-/* Common styles for Flexbox and CSS Grid */
-.flex-item,
-.grid-item {
-  padding: 10px;
-  background-color: var(--purple);
-  color: var(--light-text-color);
+body[class="css-layout-ex01-center"] div {
+  color: white;
+  border: 1px solid #75147c;
+  background-color: #75147c;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-wrap: wrap;
+  font-family: "Quicktype", sans-serif;
   font-size: 2em;
-  text-align: center;
+  padding: 10px;
+  width: 170px;
 }
 
-.flex-item {
-  width: 160px;
-  height: 80px;
-  margin: 10px;
-}
-
+/******************************************************/
 /* Exercise 02 - Flexbox */
 
+body[class="css-layout-ex02-Flexbox"] {
+  font-family: Arial, sans-serif;
+  background: black;
+  margin: 0;
+}
+
+body[class="css-layout-ex02-Flexbox"] .top-of-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body[class="css-layout-ex02-Flexbox"] .top_of_page h1 {
+  align-self: left;
+}
+
+body[class="css-layout-ex02-Flexbox"] .navigation {
+  color: #eee;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+body[class="css-layout-ex02-Flexbox"] .navigation a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+body[class="css-layout-ex02-Flexbox"] .navigation a:hover {
+  color: greenyellow;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+body[class="css-layout-ex02-Flexbox"] .main-area {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 650px;
+}
+
+body[class="css-layout-ex02-Flexbox"] .page-area {
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+  align-items: center;
+  height: 550px;
+  width: 290px;
+}
+
+body[class="css-layout-ex02-Flexbox"] h3 {
+  font-size: 14px;
+  font-weight: 2;
+}
+
+body[class="css-layout-ex02-Flexbox"] img {
+  display: block;
+}
+
+body[class="css-layout-ex02-Flexbox"] h6 {
+  color: black;
+  font-size: 13px;
+  font-weight: 5;
+}
+
+body[class="css-layout-ex02-Flexbox"] h5 {
+  color: white;
+  font-size: 18px;
+  font-weight: 2;
+}
+
+body[class="css-layout-ex02-Flexbox"] .img_descriptor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+body[class="css-layout-ex02-Flexbox"] .img_descriptor img {
+  width: 55%;
+  max-width: none;
+  max-height: none;
+  height: auto;
+}
+
+body[class="css-layout-ex02-Flexbox"] .bottom-of-page {
+  background: black;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+/******************************************************/
+/* Exercise 03 - CSS Grid */
+
+html[class="css-layout-ex03-grid"],
+body[class="css-layout-ex03-grid"] {
+  font-family: Arial, sans-serif;
+  background-color: #fefefe;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+}
+
+body[class="css-layout-ex03-grid"] h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+body[class="css-layout-ex03-grid"] .two_wide {
+  grid-column: span 2;
+}
+
+body[class="css-layout-ex03-grid"] .three_wide {
+  grid-column: span 3;
+}
+
+body[class="css-layout-ex03-grid"] .four_tall {
+  grid-row: span 4;
+}
+
+body[class="css-layout-ex03-grid"] .item7 {
+  grid-column: 1;
+  grid-row: 6;
+}
+
+body[class="css-layout-ex03-grid"] .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 100px);
+  gap: 2px;
+  width: 100%;
+  font-weight: 100;
+  color: white;
+}
+
+body[class="css-layout-ex03-grid"] .grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  border: 1px #800080;
+  background-color: #800080;
+  text-align: center;
+  font-size: 30px;
+}
 /* Exercise 03 - CSS Grid */
 
 /* Exercise 04 - CSS Grid Areas */
