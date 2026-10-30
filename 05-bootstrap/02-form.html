@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,6 +11,199 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body class="bg-light">
-    <h1 class="text-center m-4 fs-2">Roth IRA Calculator</h1>
+    <div
+      class="container d-flex justify-content-center align-items-center p-2 min-vh-100"
+    >
+      <div
+        class="border rounded p-4 bg-white shadow-sm w-100"
+        style="max-width: 550px"
+      >
+        <!------------------------------Roth IRA Calculator---------------------------->
+        <h1 class="text-center m-4 fs-2 text-dark">Roth IRA Calculator</h1>
+
+        <form action="/submitform" class="text-start">
+          <!--------------------------------Balance------------------------------------>
+          <div class="mb-3 row align-items-center">
+            <div class="col-12 col-sm-6 mb-1 mb-sm-0">
+              <label for="balance" class="fw-medium text-start"
+                >Balance ($)</label
+              >
+            </div>
+            <div class="col-12 col-sm-6 d-sm-flex justify-content-sm-end">
+              <input
+                type="text"
+                name="balance"
+                id="balance"
+                class="form-control text-start text-sm-end w-100"
+                style="max-width: 100%"
+              />
+            </div>
+          </div>
+          <!--------------------------------Balance------------------------------------>
+          <!--------------------------Annual Contribution------------------------------>
+          <div class="mb-3 row align-items-center">
+            <div class="col-12 col-sm-6 mb-1 mb-sm-0">
+              <label for="annual" class="fw-medium text-start"
+                >Annual Contribution ($)</label
+              >
+            </div>
+            <div class="col-12 col-sm-6 d-sm-flex justify-content-sm-end">
+              <input
+                type="text"
+                name="annual"
+                id="annual"
+                class="form-control text-start text-sm-end w-100"
+                style="max-width: 100%"
+              />
+            </div>
+          </div>
+          <!--------------------------Annual Contribution------------------------------>
+          <!---------------------------Max Contributiomn------------------------------->
+          <fieldset class="mb-3 row align-items-start">
+            <div class="col-12 col-sm-6 mb-2 mb-sm-0 pt-sm-1">
+              <legend class="fw-medium fs-6 mb-0 text-start">
+                Maximize contribution?
+              </legend>
+            </div>
+            <div class="col-12 col-sm-6 d-sm-flex justify-content-sm-end">
+              <div
+                class="radio_group d-flex flex-column gap-2 w-100"
+                style="max-width: 250px"
+              >
+                <!-- Option: Yes -->
+                <div class="form-check mb-0 text-start">
+                  <input
+                    type="radio"
+                    name="maximize"
+                    id="yes"
+                    value="yes"
+                    class="form-check-input"
+                  />
+                  <label for="yes" class="form-check-label">Yes</label>
+                </div>
+
+                <!-- Option: No -->
+                <div class="form-check mb-0 text-start">
+                  <input
+                    type="radio"
+                    name="maximize"
+                    id="no"
+                    value="no"
+                    class="form-check-input"
+                  />
+                  <label for="no" class="form-check-label">No</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!---------------------------Max Contributiomn------------------------------->
+          <!---------------------------Expected Return (%)----------------------------->
+          <div class="mb-3 row align-items-center">
+            <div class="col-12 col-sm-6 mb-1 mb-sm-0">
+              <label for="rate" class="fw-medium text-start"
+                >Expected return (%)</label
+              >
+            </div>
+            <div class="col-12 col-sm-6 d-sm-flex justify-content-sm-end">
+              <input
+                type="number"
+                name="rate"
+                id="rate"
+                class="form-control text-start text-sm-end w-100"
+                style="max-width: 100%"
+              />
+            </div>
+          </div>
+          <!---------------------------Expected Return (%)----------------------------->
+          <!-------------------------------Current age--------------------------------->
+          <div class="mb-3 row align-items-center">
+            <div class="col-12 col-sm-6 mb-1 mb-sm-0">
+              <label for="current" class="fw-medium text-start"
+                >Current age</label
+              >
+            </div>
+            <div class="col-12 col-sm-6 d-sm-flex justify-content-sm-end">
+              <input
+                type="number"
+                name="current"
+                id="current"
+                class="form-control text-start text-sm-end w-100"
+                style="max-width: 100%"
+              />
+            </div>
+          </div>
+          <!-------------------------------Current age--------------------------------->
+          <!------------------------------Retirement age--------------------------------->
+
+          <div class="mb-3 row align-items-center">
+            <div class="col-12 col-sm-6 mb-1 mb-sm-0">
+              <label for="retire" class="fw-medium text-start"
+                >Retirement age</label
+              >
+            </div>
+            <div class="col-12 col-sm-6 d-sm-flex justify-content-sm-end">
+              <input
+                type="number"
+                name="retire"
+                id="retire"
+                class="form-control text-start text-sm-end w-100"
+                style="max-width: 100%"
+              />
+            </div>
+          </div>
+          <!------------------------------Retirement age--------------------------------->
+          <!--------------------------------Tax rate (%)--------------------------------->
+          <div class="mb-3 row align-items-center">
+            <div class="col-12 col-sm-6 mb-1 mb-sm-0">
+              <label for="tax" class="fw-medium text-start">Tax rate ($)</label>
+            </div>
+            <div class="col-12 col-sm-6 d-sm-flex justify-content-sm-end">
+              <input
+                type="number"
+                name="tax"
+                id="tax"
+                class="form-control text-start text-sm-end w-100"
+                style="max-width: 100%"
+              />
+            </div>
+          </div>
+          <!--------------------------------Tax rate (%)--------------------------------->
+          <!----------------------------------Buttons--------------------------------->
+
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <button
+                type="submit"
+                class="btn btn-primary btn-sm text-white w-100 py-3"
+              >
+                Calculate
+              </button>
+            </div>
+            <div class="col-6">
+              <button
+                type="reset"
+                class="btn btn-sm btn-outline-dark w-100 py-3"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+        </form>
+        <!----------------------------------Buttons--------------------------------->
+        <!----------------------------------Paragraph--------------------------------->
+
+        <p class="text-left text-muted small mt-4 mb-0">
+          This exercise is a simplified version of the Roth IRA Calculator at
+          <a
+            href="https://www.calculator.net/roth-ira-calculator.html"
+            target="_blank"
+            class="text-decoration-none"
+            >Calculator.net</a
+          >
+        </p>
+        <!----------------------------------Paragraph--------------------------------->
+      </div>
+    </div>
   </body>
 </html>
